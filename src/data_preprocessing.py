@@ -17,7 +17,6 @@ def load_data(train_path, test_path):
     train_df = pd.read_csv(train_path, encoding='latin-1')
     test_df = pd.read_csv(test_path, encoding='latin-1')
 
-    # Combine title + description (IMPORTANT 🔥)
     train_df['text'] = train_df['Title'] + " " + train_df['Description']
     test_df['text'] = test_df['Title'] + " " + test_df['Description']
 
